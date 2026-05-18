@@ -59,47 +59,73 @@ const SkeletonBar = ({ width, height, className = "", style = {} }: { width: str
 );
 
 const HomeSkeleton = () => (
-  <div>
+  <div style={{ background: 'linear-gradient(135deg, #111111 0%, #070707 100%)', minHeight: '100vh' }}>
     {/* Hero Skeleton */}
-    <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', background: 'var(--bg-divine)', paddingTop: '80px', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(var(--border-light) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.4, zIndex: 0 }} />
-      <div className="container" style={{ position: 'relative', zIndex: 3, width: '100%' }}>
-        <div style={{ maxWidth: '900px' }}>
-          {/* Mini title */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-            <SkeletonBar width={30} height={2} className="skeleton-shimmer-gold-solid" />
-            <SkeletonBar width={220} height={16} className="skeleton-shimmer-gold" />
+    <section style={{ 
+      minHeight: '100vh', 
+      display: 'flex', 
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      position: 'relative', 
+      paddingTop: '120px', 
+      overflow: 'hidden' 
+    }}>
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.3, zIndex: 0 }} />
+      
+      <div className="container" style={{ position: 'relative', zIndex: 3, flex: 1, display: 'flex', alignItems: 'center', width: '100%', paddingBottom: '4rem', paddingTop: '2rem' }}>
+        <div className="responsive-grid-2" style={{ alignItems: 'center', width: '100%' }}>
+          
+          {/* Left Column Skeleton */}
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              <SkeletonBar width={24} height={2} className="skeleton-shimmer-gold-solid" />
+              <SkeletonBar width={200} height={16} className="skeleton-shimmer-gold" />
+            </div>
+            
+            <div style={{ marginBottom: '2.5rem' }}>
+              <SkeletonBar width="85%" height={56} className="skeleton-shimmer" style={{ marginBottom: '1rem', display: 'block' }} />
+              <SkeletonBar width="70%" height={56} className="skeleton-shimmer" style={{ marginBottom: '1rem', display: 'block' }} />
+              <SkeletonBar width="60%" height={56} className="skeleton-shimmer" style={{ display: 'block' }} />
+            </div>
+            
+            <div style={{ marginBottom: '3.5rem' }}>
+              <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ marginBottom: '0.6rem', display: 'block', maxWidth: '560px' }} />
+              <SkeletonBar width="85%" height={16} className="skeleton-shimmer" style={{ display: 'block', maxWidth: '560px' }} />
+            </div>
+            
+            <div style={{ display: 'flex', gap: '1.5rem' }}>
+              <SkeletonBar width={180} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
+              <SkeletonBar width={150} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
+            </div>
           </div>
-          {/* Giant headline */}
-          <div style={{ marginBottom: '2.5rem' }}>
-            <SkeletonBar width="85%" height={64} className="skeleton-shimmer" style={{ marginBottom: '1rem', display: 'block' }} />
-            <SkeletonBar width="65%" height={64} className="skeleton-shimmer" style={{ display: 'block' }} />
+
+          {/* Right Column Circular Skeleton */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ position: 'relative', width: '440px', height: '440px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="skeleton-shimmer-gold" style={{ width: '340px', height: '340px', borderRadius: '50%', border: '4px solid rgba(212,175,55,0.1)' }} />
+              {/* Badges skeletons */}
+              <div className="skeleton-shimmer" style={{ width: '100px', height: '54px', borderRadius: '12px', position: 'absolute', top: '10%', left: '-5%' }} />
+              <div className="skeleton-shimmer" style={{ width: '110px', height: '54px', borderRadius: '12px', position: 'absolute', top: '15%', right: '-8%' }} />
+              <div className="skeleton-shimmer" style={{ width: '110px', height: '54px', borderRadius: '12px', position: 'absolute', bottom: '15%', left: '-5%' }} />
+              <div className="skeleton-shimmer" style={{ width: '120px', height: '54px', borderRadius: '12px', position: 'absolute', bottom: '10%', right: '-8%' }} />
+            </div>
           </div>
-          {/* Subparagraph */}
-          <div style={{ marginBottom: '3.5rem' }}>
-            <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ marginBottom: '0.6rem', display: 'block', maxWidth: '600px' }} />
-            <SkeletonBar width="80%" height={16} className="skeleton-shimmer" style={{ display: 'block', maxWidth: '600px' }} />
-          </div>
-          {/* Buttons */}
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <SkeletonBar width={180} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
-            <SkeletonBar width={150} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
-          </div>
+
         </div>
       </div>
-      {/* Right Column Image Skeleton */}
-      <div className="hero-image-wrapper">
-        <div className="skeleton-shimmer-gold" style={{ width: '100%', height: '100%' }} />
-      </div>
-    </section>
 
-    {/* Trust Bar Skeleton */}
-    <section style={{ background: 'white', padding: '3rem 0', borderBottom: '1px solid var(--border-light)' }}>
-      <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '3rem' }}>
-          {[1, 2, 3, 4, 5].map((i) => (
-            <SkeletonBar key={i} width={120} height={16} className="skeleton-shimmer" />
-          ))}
+      {/* Bottom stats skeleton */}
+      <div className="hero-stats-bar" style={{ background: 'rgba(15, 15, 15, 0.98)' }}>
+        <div className="container">
+          <div className="hero-stats-grid">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} style={{ padding: '0 2rem' }}>
+                <SkeletonBar width={80} height={36} className="skeleton-shimmer-gold" style={{ marginBottom: '0.5rem', display: 'block' }} />
+                <SkeletonBar width={140} height={14} className="skeleton-shimmer" style={{ marginBottom: '0.5rem', display: 'block' }} />
+                <SkeletonBar width="100%" height={12} className="skeleton-shimmer" style={{ display: 'block' }} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -457,49 +483,150 @@ const Navbar = () => {
 const HomePage = () => {
   return (
     <div>
-      {/* Hero */}
-      <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', background: 'var(--bg-divine)', paddingTop: '80px', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(var(--border-light) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.4, zIndex: 0 }} />
-        <div style={{ position: 'absolute', top: '10%', right: '-5%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none', zIndex: 1 }} />
-        <div style={{ position: 'absolute', bottom: '10%', left: '-10%', width: '40vw', height: '40vw', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none', zIndex: 1 }} />
+      {/* Premium Hero section with Circular Badges and bottom Stats Bar */}
+      <section style={{ 
+        minHeight: '100vh', 
+        display: 'flex', 
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        position: 'relative', 
+        background: 'linear-gradient(135deg, #111111 0%, #070707 100%)', 
+        paddingTop: '120px', 
+        overflow: 'hidden' 
+      }}>
+        {/* Soft background grid and ambient lighting glow */}
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.3, zIndex: 0 }} />
+        <div style={{ position: 'absolute', top: '10%', right: '-10%', width: '50vw', height: '50vw', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none', zIndex: 1 }} />
+        <div style={{ position: 'absolute', bottom: '20%', left: '-10%', width: '40vw', height: '40vw', background: 'radial-gradient(circle, rgba(255, 62, 62, 0.03) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none', zIndex: 1 }} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 3 }}>
-          <div style={{ maxWidth: '900px' }}>
-            <FadeIn animation="down" className="text-gold" style={{ fontWeight: 600, letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '1.5rem', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <span style={{ width: '30px', height: '1px', background: 'var(--primary)' }} />
-              ISSA-Certified Master Trainer
-            </FadeIn>
-            <FadeIn animation="up" style={{ transitionDuration: '1s' }}>
-              <h1 className="hero-title" style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', lineHeight: 1, marginBottom: '2.5rem', fontWeight: 900, letterSpacing: '-0.03em' }}>
-                Unleash Your <br />
-                <ShinyText text="Highest" /> Potential.
-              </h1>
-            </FadeIn>
-            <FadeIn animation="up" delay={0.3}>
-              <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '3.5rem', maxWidth: '600px', fontWeight: 400, lineHeight: 1.6 }}>
-                Bespoke fitness experiences designed for those who demand excellence. Elevate your performance with science-backed coaching.
-              </p>
-              <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-                <Link to="/services" className="btn-gold">Explore Services <ArrowRight size={16} /></Link>
-                <Link to="/contact" className="nav-link" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Book Consultation</Link>
+        <div className="container" style={{ position: 'relative', zIndex: 3, flex: 1, display: 'flex', alignItems: 'center', paddingBottom: '4rem', paddingTop: '2rem' }}>
+          <div className="responsive-grid-2" style={{ alignItems: 'center', width: '100%' }}>
+            
+            {/* Left Column: Text Content */}
+            <div>
+              <FadeIn animation="down" className="text-gold" style={{ fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '1.5rem', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <span style={{ width: '24px', height: '1.5px', background: 'var(--primary)' }} />
+                ISSA Master Certified Coach
+              </FadeIn>
+              
+              <FadeIn animation="up" style={{ transitionDuration: '1s' }}>
+                <h1 style={{ 
+                  color: 'white', 
+                  fontSize: 'clamp(2.8rem, 6vw, 5rem)', 
+                  lineHeight: 1.05, 
+                  marginBottom: '2.5rem', 
+                  fontWeight: 900, 
+                  letterSpacing: '-0.02em',
+                  fontFamily: 'var(--font-main)'
+                }}>
+                  Achieve Your <br />
+                  <span className="fitness-goals-title">FITNESS GOALS</span> <br />
+                  With Kymberley Marr
+                </h1>
+              </FadeIn>
+              
+              <FadeIn animation="up" delay={0.25}>
+                <p style={{ 
+                  fontSize: '1.15rem', 
+                  color: 'rgba(255, 255, 255, 0.65)', 
+                  marginBottom: '3.5rem', 
+                  maxWidth: '560px', 
+                  fontWeight: 400, 
+                  lineHeight: 1.65 
+                }}>
+                  Join the elite Kymberley Marr Fitness community and transform your body under the guidance of a top-tier ISSA Master Trainer. Personalized programming engineered for your absolute success.
+                </p>
+                
+                <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                  <Link to="/contact" className="btn-gold" style={{ background: '#FF1F1F', boxShadow: '0 8px 30px rgba(255,31,31,0.3)', border: 'none' }}>
+                    Start Your Journey
+                  </Link>
+                  <Link to="/services" className="btn-gold" style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.15)', color: 'white !important', boxShadow: 'none' }}>
+                    Explore Programs
+                  </Link>
+                </div>
+              </FadeIn>
+            </div>
+
+            {/* Right Column: Circular Trainer Card with Floating Badges */}
+            <FadeIn animation="left" delay={0.15}>
+              <div className="hero-trainer-container">
+                {/* Glowing breathing background backdrop */}
+                <div className="hero-trainer-glow" />
+
+                {/* Centered Circle Image */}
+                <div className="hero-trainer-circle">
+                  <img 
+                    src="/kymberley_portrait.png" 
+                    alt="Kymberley Marr" 
+                    className="hero-trainer-image"
+                  />
+                </div>
+
+                {/* Floating Indicators */}
+                {/* 1. Coaches Badge (Top-Left) */}
+                <div className="floating-glow-badge" style={{ top: '10%', left: '-5%' }}>
+                  <span className="badge-value">+ 10</span>
+                  <span className="badge-label">Years Exp</span>
+                </div>
+
+                {/* 2. Positive Reviews Badge (Top-Right) */}
+                <div className="floating-glow-badge" style={{ top: '15%', right: '-8%' }}>
+                  <span className="badge-value">+ 500</span>
+                  <span className="badge-label">Reviews</span>
+                </div>
+
+                {/* 3. Workout Videos Badge (Bottom-Left) */}
+                <div className="floating-glow-badge" style={{ bottom: '15%', left: '-5%' }}>
+                  <span className="badge-value">100%</span>
+                  <span className="badge-label">Science-Backed</span>
+                </div>
+
+                {/* 4. Trainers Badge (Bottom-Right) */}
+                <div className="floating-glow-badge" style={{ bottom: '10%', right: '-8%' }}>
+                  <span className="badge-value">+ 1500</span>
+                  <span className="badge-label">Sessions Completed</span>
+                </div>
               </div>
             </FadeIn>
+
           </div>
         </div>
 
-        <div className="hero-image-wrapper">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Hero" />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.2), transparent)' }} />
-        </div>
-      </section>
+        {/* Bottom Unified Stats / Trust Bar */}
+        <div className="hero-stats-bar">
+          <div className="container">
+            <div className="hero-stats-grid">
+              
+              {/* Stat 1 */}
+              <div className="hero-stat-card">
+                <div className="hero-stat-number" style={{ color: '#FF1F1F' }}>96%</div>
+                <div className="hero-stat-title">Client Satisfaction</div>
+                <div className="hero-stat-desc">Our members love their life-changing results and daily coaching experience.</div>
+              </div>
 
-      {/* Trust Bar */}
-      <section style={{ background: 'white', padding: '3rem 0', borderBottom: '1px solid var(--border-light)' }}>
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0.4, filter: 'grayscale(100%)', flexWrap: 'wrap', gap: '3rem' }}>
-            {['ISSA', 'NASM', 'PRECISION NUTRITION', "MEN'S HEALTH", 'FITNESS FIRST'].map((brand, i) => (
-              <span key={i} style={{ fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.3em', textTransform: 'uppercase' }}>{brand}</span>
-            ))}
+              {/* Stat 2 */}
+              <div className="hero-stat-card">
+                <div className="hero-stat-number">+10</div>
+                <div className="hero-stat-title">Years of Experience</div>
+                <div className="hero-stat-desc">Trust in our certified, long-standing track record of premium conditioning.</div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="hero-stat-card">
+                <div className="hero-stat-number" style={{ color: '#FF1F1F' }}>+800</div>
+                <div className="hero-stat-title">Active Members</div>
+                <div className="hero-stat-desc">Join our close-knit, highly supportive fitness and wellness community.</div>
+              </div>
+
+              {/* Stat 4 */}
+              <div className="hero-stat-card">
+                <div className="hero-stat-number">24/7</div>
+                <div className="hero-stat-title">Support Available</div>
+                <div className="hero-stat-desc">Access professional expert guidance and accountability whenever you need it.</div>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
