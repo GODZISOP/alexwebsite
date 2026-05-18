@@ -29,8 +29,8 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
     const el = elementRef.current;
     if (!el) return;
 
-    let initialVars = {};
-    let activeVars = {
+    let initialVars: gsap.TweenVars = {};
+    let activeVars: gsap.TweenVars = {
       opacity: 1,
       x: 0,
       y: 0,
