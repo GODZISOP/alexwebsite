@@ -46,6 +46,203 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// --- Skeleton Loading Components ---
+const SkeletonBar = ({ width, height, className = "", style = {} }: { width: string | number, height: string | number, className?: string, style?: React.CSSProperties }) => (
+  <div 
+    className={`skeleton-bar ${className}`} 
+    style={{ 
+      width: typeof width === 'number' ? `${width}px` : width, 
+      height: typeof height === 'number' ? `${height}px` : height, 
+      ...style 
+    }} 
+  />
+);
+
+const HomeSkeleton = () => (
+  <div>
+    {/* Hero Skeleton */}
+    <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', position: 'relative', background: 'var(--bg-divine)', paddingTop: '80px', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(var(--border-light) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.4, zIndex: 0 }} />
+      <div className="container" style={{ position: 'relative', zIndex: 3, width: '100%' }}>
+        <div style={{ maxWidth: '900px' }}>
+          {/* Mini title */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <SkeletonBar width={30} height={2} className="skeleton-shimmer-gold-solid" />
+            <SkeletonBar width={220} height={16} className="skeleton-shimmer-gold" />
+          </div>
+          {/* Giant headline */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <SkeletonBar width="85%" height={64} className="skeleton-shimmer" style={{ marginBottom: '1rem', display: 'block' }} />
+            <SkeletonBar width="65%" height={64} className="skeleton-shimmer" style={{ display: 'block' }} />
+          </div>
+          {/* Subparagraph */}
+          <div style={{ marginBottom: '3.5rem' }}>
+            <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ marginBottom: '0.6rem', display: 'block', maxWidth: '600px' }} />
+            <SkeletonBar width="80%" height={16} className="skeleton-shimmer" style={{ display: 'block', maxWidth: '600px' }} />
+          </div>
+          {/* Buttons */}
+          <div style={{ display: 'flex', gap: '1.5rem' }}>
+            <SkeletonBar width={180} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
+            <SkeletonBar width={150} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
+          </div>
+        </div>
+      </div>
+      {/* Right Column Image Skeleton */}
+      <div className="hero-image-wrapper">
+        <div className="skeleton-shimmer-gold" style={{ width: '100%', height: '100%' }} />
+      </div>
+    </section>
+
+    {/* Trust Bar Skeleton */}
+    <section style={{ background: 'white', padding: '3rem 0', borderBottom: '1px solid var(--border-light)' }}>
+      <div className="container">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '3rem' }}>
+          {[1, 2, 3, 4, 5].map((i) => (
+            <SkeletonBar key={i} width={120} height={16} className="skeleton-shimmer" />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* About Section Skeleton */}
+    <section className="section-padding marble-bg">
+      <div className="container">
+        <div className="responsive-grid-2" style={{ alignItems: 'center' }}>
+          <div className="skeleton-shimmer" style={{ height: '500px', width: '100%', borderRadius: 'var(--radius-sm)' }} />
+          <div>
+            <SkeletonBar width={100} height={14} className="skeleton-shimmer-gold" style={{ marginBottom: '1rem', display: 'block' }} />
+            <SkeletonBar width="70%" height={40} className="skeleton-shimmer" style={{ marginBottom: '1.5rem', display: 'block' }} />
+            <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ marginBottom: '0.8rem', display: 'block' }} />
+            <SkeletonBar width="95%" height={16} className="skeleton-shimmer" style={{ marginBottom: '2rem', display: 'block' }} />
+            <div style={{ padding: '1.5rem', background: 'white', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid #f0e6c8', display: 'inline-block', minWidth: '180px' }}>
+              <SkeletonBar width={80} height={36} className="skeleton-shimmer" style={{ marginBottom: '0.5rem', display: 'block' }} />
+              <SkeletonBar width={100} height={12} className="skeleton-shimmer" style={{ display: 'block' }} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+);
+
+const AboutSkeleton = () => (
+  <div style={{ background: 'var(--bg-base)' }}>
+    {/* Section 01 Skeleton */}
+    <section className="section-padding" style={{ backgroundColor: '#D4AF37', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
+      <div className="container" style={{ width: '100%' }}>
+        <SkeletonBar width={120} height={14} className="skeleton-shimmer-dark" style={{ marginBottom: '2rem', display: 'block', opacity: 0.25 }} />
+        <div style={{ height: '1px', background: 'black', opacity: 0.1, margin: '2rem 0' }} />
+        <div style={{ marginBottom: '3rem' }}>
+          <SkeletonBar width="50%" height={60} className="skeleton-shimmer-dark" style={{ marginBottom: '1rem', display: 'block', opacity: 0.2 }} />
+          <SkeletonBar width="40%" height={60} className="skeleton-shimmer-dark" style={{ marginBottom: '1rem', display: 'block', opacity: 0.2 }} />
+          <SkeletonBar width="60%" height={60} className="skeleton-shimmer-dark" style={{ display: 'block', opacity: 0.2 }} />
+        </div>
+        <SkeletonBar width="100%" height={18} className="skeleton-shimmer-dark" style={{ marginBottom: '0.8rem', display: 'block', maxWidth: '600px', opacity: 0.2 }} />
+        <SkeletonBar width="85%" height={18} className="skeleton-shimmer-dark" style={{ display: 'block', maxWidth: '600px', opacity: 0.2 }} />
+      </div>
+    </section>
+
+    {/* Section 02 Skeleton */}
+    <section className="section-padding" style={{ backgroundColor: '#000', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
+      <div className="container" style={{ width: '100%' }}>
+        <SkeletonBar width={150} height={14} className="skeleton-shimmer-gold" style={{ marginBottom: '2rem', display: 'block', opacity: 0.3 }} />
+        <div style={{ height: '1px', background: 'white', opacity: 0.1, margin: '2rem 0' }} />
+        <div style={{ marginBottom: '4rem' }}>
+          <SkeletonBar width="40%" height={60} className="skeleton-shimmer-dark" style={{ marginBottom: '1rem', display: 'block' }} />
+          <SkeletonBar width="30%" height={60} className="skeleton-shimmer-dark" style={{ marginBottom: '1rem', display: 'block' }} />
+          <SkeletonBar width="35%" height={60} className="skeleton-shimmer-dark" style={{ display: 'block' }} />
+        </div>
+        <SkeletonBar width="100%" height={18} className="skeleton-shimmer-dark" style={{ marginBottom: '0.8rem', display: 'block', maxWidth: '600px' }} />
+        <SkeletonBar width="70%" height={18} className="skeleton-shimmer-dark" style={{ marginBottom: '4rem', display: 'block', maxWidth: '600px' }} />
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem' }}>
+          {[1, 2, 3].map((i) => (
+            <div key={i}>
+              <SkeletonBar width={100} height={16} className="skeleton-shimmer-dark" style={{ marginBottom: '1.2rem', display: 'block' }} />
+              <SkeletonBar width="100%" height={14} className="skeleton-shimmer-dark" style={{ marginBottom: '0.6rem', display: 'block' }} />
+              <SkeletonBar width="85%" height={14} className="skeleton-shimmer-dark" style={{ display: 'block' }} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+);
+
+const ServicesSkeleton = () => (
+  <section className="section-padding" style={{ minHeight: '100vh', paddingTop: '140px', background: 'var(--bg-surface)' }}>
+    <div className="container">
+      <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+        <SkeletonBar width={120} height={14} className="skeleton-shimmer-gold" style={{ marginBottom: '1rem' }} />
+        <SkeletonBar width={300} height={48} className="skeleton-shimmer" style={{ display: 'block', margin: '0 auto' }} />
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        {[1, 2, 3, 4].map((i) => (
+          <div key={i} style={{ padding: '3rem 2.5rem', background: 'white', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-md)' }}>
+            <SkeletonBar width={180} height={24} className="skeleton-shimmer" style={{ marginBottom: '1.5rem', display: 'block' }} />
+            <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ marginBottom: '0.8rem', display: 'block' }} />
+            <SkeletonBar width="90%" height={16} className="skeleton-shimmer" style={{ marginBottom: '2.5rem', display: 'block' }} />
+            <SkeletonBar width={100} height={14} className="skeleton-shimmer-gold" style={{ display: 'block' }} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const ContactSkeleton = () => (
+  <section className="section-padding marble-bg" style={{ minHeight: '100vh', paddingTop: '140px' }}>
+    <div className="container">
+      <div style={{ maxWidth: '800px', margin: '0 auto', background: 'var(--bg-divine)', padding: '5rem 3rem', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-gold)', textAlign: 'center', boxShadow: '0 20px 50px rgba(0,0,0,0.05)' }}>
+        <SkeletonBar width={100} height={14} className="skeleton-shimmer-gold" style={{ marginBottom: '1.5rem' }} />
+        <SkeletonBar width="60%" height={48} className="skeleton-shimmer" style={{ display: 'block', margin: '0 auto 1.5rem' }} />
+        <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ display: 'block', margin: '0 auto 0.8rem', maxWidth: '600px' }} />
+        <SkeletonBar width="80%" height={16} className="skeleton-shimmer" style={{ display: 'block', margin: '0 auto 3rem', maxWidth: '600px' }} />
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
+          <SkeletonBar width={250} height={24} className="skeleton-shimmer" style={{ marginBottom: '0.5rem' }} />
+          <SkeletonBar width={220} height={24} className="skeleton-shimmer" />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+// --- Page Wrapper for Skeleton Loading Transition ---
+function PageWrapper({ children, skeleton: Skeleton }: { children: React.ReactNode, skeleton: React.ComponentType }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 850); // 850ms of shimmering elegance
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div style={{ position: 'relative', width: '100%' }}>
+      {isLoading ? (
+        <motion.div 
+          key="skeleton"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Skeleton />
+        </motion.div>
+      ) : (
+        <motion.div
+          key="content"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {children}
+        </motion.div>
+      )}
+    </div>
+  );
+}
 
 // --- Reusable Component: ShinyText ---
 const ShinyText = ({ text, className = "" }: { text: string, className?: string }) => {
@@ -1027,10 +1224,10 @@ export default function App() {
       <div className="app" style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/" element={<PageWrapper skeleton={HomeSkeleton}><HomePage /></PageWrapper>} />
+          <Route path="/about" element={<PageWrapper skeleton={AboutSkeleton}><AboutPage /></PageWrapper>} />
+          <Route path="/services" element={<PageWrapper skeleton={ServicesSkeleton}><ServicesPage /></PageWrapper>} />
+          <Route path="/contact" element={<PageWrapper skeleton={ContactSkeleton}><ContactPage /></PageWrapper>} />
         </Routes>
         <Footer />
       </div>

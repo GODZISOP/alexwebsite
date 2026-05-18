@@ -465,3 +465,73 @@ button {
 .mobile-menu-link:hover {
   color: var(--primary);
 }
+
+/* ===== SKELETON LOADING AND EFFECTS ===== */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-base {
+  background: #f4f4f2;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 245, 243, 1) 25%,
+    rgba(233, 233, 229, 1) 37%,
+    rgba(245, 245, 243, 1) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.03) 25%,
+    rgba(212, 175, 55, 0.12) 37%,
+    rgba(212, 175, 55, 0.03) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-shimmer-dark {
+  background: linear-gradient(
+    90deg,
+    rgba(24, 24, 24, 1) 25%,
+    rgba(38, 38, 38, 1) 37%,
+    rgba(24, 24, 24, 1) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-shimmer-gold-solid {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.8) 25%,
+    rgba(230, 200, 80, 0.9) 37%,
+    rgba(212, 175, 55, 0.8) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+}
+
+.skeleton-circle {
+  border-radius: 50%;
+}
+
+.skeleton-bar {
+  border-radius: var(--radius-xs);
+  display: inline-block;
+  vertical-align: middle;
+}
