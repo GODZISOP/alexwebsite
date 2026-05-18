@@ -1185,23 +1185,34 @@ const ContactPage = () => (
   <section className="section-padding marble-bg" style={{ minHeight: '100vh', paddingTop: '140px' }}>
     <div className="container">
       <FadeIn animation="up">
-        <div style={{ maxWidth: '800px', margin: '0 auto', background: 'var(--bg-divine)', padding: '5rem 3rem', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-gold)', textAlign: 'center', boxShadow: '0 20px 50px rgba(0,0,0,0.05)' }}>
+        <div style={{ 
+          maxWidth: '800px', 
+          margin: '0 auto', 
+          background: 'var(--bg-divine)', 
+          padding: 'clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 3rem)', 
+          borderRadius: 'var(--radius-lg)', 
+          border: '1px solid var(--border-gold)', 
+          textAlign: 'center', 
+          boxShadow: '0 20px 50px rgba(0,0,0,0.05)',
+          width: '100%',
+          boxSizing: 'border-box'
+        }}>
           <div className="text-gold" style={{ fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem', fontSize: '0.8rem' }}>Take Action</div>
-          <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: 800 }}>Ready to Transform?</h1>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.1rem' }}>
+          <h1 style={{ fontSize: 'clamp(2rem, 8vw, 4rem)', marginBottom: '1.5rem', fontWeight: 800, lineHeight: 1.1 }}>Ready to Transform?</h1>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', lineHeight: 1.7, maxWidth: '560px', margin: '0 auto 3rem' }}>
             Contact me today to schedule your first consultation and begin your journey to excellence. I am ready to help you hit your goals.
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center', marginBottom: '3rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.25rem', fontWeight: 600 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', alignItems: 'center', marginBottom: '3rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: 'clamp(1rem, 3vw, 1.25rem)', fontWeight: 600 }}>
               <Phone className="text-gold" /> (920) 957-2284
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.25rem', fontWeight: 600 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: 'clamp(1rem, 3vw, 1.25rem)', fontWeight: 600 }}>
               <MapPin className="text-gold" /> Wisconsin, USA
             </div>
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center' }}>
-            <a href="tel:9209572284" className="btn-gold" style={{ padding: '1rem 2rem', fontSize: '1rem' }}>Call Now</a>
-            <a href="mailto:contact@kymberleymarr.com" className="btn-gold" style={{ background: 'transparent', color: 'var(--primary)', border: '1px solid var(--primary)', padding: '1rem 2rem', fontSize: '1rem' }}>Email Me</a>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+            <a href="tel:9209572284" className="btn-gold" style={{ padding: '1rem 2rem', fontSize: '1rem', flex: '1 1 auto', maxWidth: '200px' }}>Call Now</a>
+            <a href="mailto:contact@kymberleymarr.com" className="btn-gold" style={{ background: 'transparent', color: 'var(--primary)', border: '1px solid var(--primary)', padding: '1rem 2rem', fontSize: '1rem', flex: '1 1 auto', maxWidth: '200px' }}>Email Me</a>
           </div>
         </div>
       </FadeIn>
