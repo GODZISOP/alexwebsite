@@ -78,36 +78,36 @@ const HomeSkeleton = () => (
           {/* Left Column Skeleton */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
-              <SkeletonBar width={24} height={2} className="skeleton-shimmer-gold-solid" />
-              <SkeletonBar width={200} height={16} className="skeleton-shimmer-gold" />
+              <SkeletonBar width={24} height={2} className="skeleton-shimmer-dark" />
+              <SkeletonBar width={200} height={16} className="skeleton-shimmer-dark" />
             </div>
             
             <div style={{ marginBottom: '2.5rem' }}>
-              <SkeletonBar width="85%" height={56} className="skeleton-shimmer" style={{ marginBottom: '1rem', display: 'block' }} />
-              <SkeletonBar width="70%" height={56} className="skeleton-shimmer" style={{ marginBottom: '1rem', display: 'block' }} />
-              <SkeletonBar width="60%" height={56} className="skeleton-shimmer" style={{ display: 'block' }} />
+              <SkeletonBar width="85%" height={56} className="skeleton-shimmer-dark" style={{ marginBottom: '1rem', display: 'block' }} />
+              <SkeletonBar width="70%" height={56} className="skeleton-shimmer-dark" style={{ marginBottom: '1rem', display: 'block' }} />
+              <SkeletonBar width="60%" height={56} className="skeleton-shimmer-dark" style={{ display: 'block' }} />
             </div>
             
             <div style={{ marginBottom: '3.5rem' }}>
-              <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ marginBottom: '0.6rem', display: 'block', maxWidth: '560px' }} />
-              <SkeletonBar width="85%" height={16} className="skeleton-shimmer" style={{ display: 'block', maxWidth: '560px' }} />
+              <SkeletonBar width="100%" height={16} className="skeleton-shimmer-dark" style={{ marginBottom: '0.6rem', display: 'block', maxWidth: '560px' }} />
+              <SkeletonBar width="85%" height={16} className="skeleton-shimmer-dark" style={{ display: 'block', maxWidth: '560px' }} />
             </div>
             
             <div style={{ display: 'flex', gap: '1.5rem' }}>
-              <SkeletonBar width={180} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
-              <SkeletonBar width={150} height={46} className="skeleton-shimmer" style={{ borderRadius: 'var(--radius-xs)' }} />
+              <SkeletonBar width={180} height={46} className="skeleton-shimmer-dark" style={{ borderRadius: 'var(--radius-xs)' }} />
+              <SkeletonBar width={150} height={46} className="skeleton-shimmer-dark" style={{ borderRadius: 'var(--radius-xs)' }} />
             </div>
           </div>
 
           {/* Right Column Circular Skeleton */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ position: 'relative', width: '440px', height: '440px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <div className="skeleton-shimmer-gold" style={{ width: '340px', height: '340px', borderRadius: '50%', border: '4px solid rgba(212,175,55,0.1)' }} />
+              <div className="skeleton-shimmer-dark" style={{ width: '340px', height: '340px', borderRadius: '50%', border: '2px solid rgba(255,255,255,0.05)' }} />
               {/* Badges skeletons */}
-              <div className="skeleton-shimmer" style={{ width: '100px', height: '54px', borderRadius: '12px', position: 'absolute', top: '10%', left: '-5%' }} />
-              <div className="skeleton-shimmer" style={{ width: '110px', height: '54px', borderRadius: '12px', position: 'absolute', top: '15%', right: '-8%' }} />
-              <div className="skeleton-shimmer" style={{ width: '110px', height: '54px', borderRadius: '12px', position: 'absolute', bottom: '15%', left: '-5%' }} />
-              <div className="skeleton-shimmer" style={{ width: '120px', height: '54px', borderRadius: '12px', position: 'absolute', bottom: '10%', right: '-8%' }} />
+              <div className="skeleton-shimmer-dark" style={{ width: '100px', height: '54px', borderRadius: '12px', position: 'absolute', top: '10%', left: '-5%' }} />
+              <div className="skeleton-shimmer-dark" style={{ width: '110px', height: '54px', borderRadius: '12px', position: 'absolute', top: '15%', right: '-8%' }} />
+              <div className="skeleton-shimmer-dark" style={{ width: '110px', height: '54px', borderRadius: '12px', position: 'absolute', bottom: '15%', left: '-5%' }} />
+              <div className="skeleton-shimmer-dark" style={{ width: '120px', height: '54px', borderRadius: '12px', position: 'absolute', bottom: '10%', right: '-8%' }} />
             </div>
           </div>
 
@@ -120,9 +120,9 @@ const HomeSkeleton = () => (
           <div className="hero-stats-grid">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} style={{ padding: '0 2rem' }}>
-                <SkeletonBar width={80} height={36} className="skeleton-shimmer-gold" style={{ marginBottom: '0.5rem', display: 'block' }} />
-                <SkeletonBar width={140} height={14} className="skeleton-shimmer" style={{ marginBottom: '0.5rem', display: 'block' }} />
-                <SkeletonBar width="100%" height={12} className="skeleton-shimmer" style={{ display: 'block' }} />
+                <SkeletonBar width={80} height={36} className="skeleton-shimmer-dark" style={{ marginBottom: '0.5rem', display: 'block' }} />
+                <SkeletonBar width={140} height={14} className="skeleton-shimmer-dark" style={{ marginBottom: '0.5rem', display: 'block' }} />
+                <SkeletonBar width="100%" height={12} className="skeleton-shimmer-dark" style={{ display: 'block' }} />
               </div>
             ))}
           </div>
@@ -136,7 +136,7 @@ const HomeSkeleton = () => (
         <div className="responsive-grid-2" style={{ alignItems: 'center' }}>
           <div className="skeleton-shimmer" style={{ height: '500px', width: '100%', borderRadius: 'var(--radius-sm)' }} />
           <div>
-            <SkeletonBar width={100} height={14} className="skeleton-shimmer-gold" style={{ marginBottom: '1rem', display: 'block' }} />
+            <SkeletonBar width={100} height={14} className="skeleton-shimmer" style={{ marginBottom: '1rem', display: 'block' }} />
             <SkeletonBar width="70%" height={40} className="skeleton-shimmer" style={{ marginBottom: '1.5rem', display: 'block' }} />
             <SkeletonBar width="100%" height={16} className="skeleton-shimmer" style={{ marginBottom: '0.8rem', display: 'block' }} />
             <SkeletonBar width="95%" height={16} className="skeleton-shimmer" style={{ marginBottom: '2rem', display: 'block' }} />
@@ -1060,87 +1060,91 @@ const HomePage = () => {
 
 // --- About Page ---
 const AboutPage = () => (
-  <div style={{ background: 'linear-gradient(135deg, #111111 0%, #070707 100%)', color: 'white' }}>
+  <div style={{ background: 'var(--bg-base)' }}>
     {/* Section 01 */}
-    <section className="section-padding" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', position: 'relative', paddingTop: '140px' }}>
-      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.3, zIndex: 0 }} />
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--primary)', opacity: 0.8 }}>01 — Who I Am</p>
-        <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '2rem 0' }} />
-        <h1 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', fontWeight: 800, lineHeight: 0.9, textTransform: 'uppercase', color: 'white', marginBottom: '3rem' }}>
-          Evolve<br />Your<br /><span className="text-gold">Strength</span>
-        </h1>
-        <p style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', maxWidth: '600px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
-          I am Kymberley Marr, an ISSA-certified fitness professional with over a decade of experience. I specialize in helping individuals break through plateaus and achieve lasting transformations.
-        </p>
+    <section className="section-padding" style={{ backgroundColor: '#D4AF37', color: '#fff', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
+      <div className="container">
+        <FadeIn animation="down">
+          <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'black', opacity: 0.6 }}>01 — Who I Am</p>
+        </FadeIn>
+        <div style={{ height: '1px', background: 'black', opacity: 0.1, margin: '2rem 0' }} />
+        <FadeIn animation="up" style={{ transitionDuration: '1s' }}>
+          <h1 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', fontWeight: 800, lineHeight: 0.9, textTransform: 'uppercase', color: 'black', marginBottom: '3rem' }}>
+            Evolve<br />Your<br />Strength
+          </h1>
+        </FadeIn>
+        <FadeIn animation="up" delay={0.3}>
+          <p style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', maxWidth: '600px', color: 'black', lineHeight: 1.6 }}>
+            I am Kymberley Marr, an ISSA-certified fitness professional with over a decade of experience. I specialize in helping individuals break through plateaus and achieve lasting transformations.
+          </p>
+        </FadeIn>
       </div>
     </section>
 
     {/* Section 02 */}
-    <section className="section-padding" style={{ background: '#0a0a0a', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
+    <section className="section-padding" style={{ backgroundColor: '#000', color: '#D4AF37', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
       <div className="container">
-        <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'rgba(255,255,255,0.5)' }}>02 — The Mission</p>
-        <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '2rem 0' }} />
-        <h2 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', fontWeight: 800, lineHeight: 0.9, textTransform: 'uppercase', marginBottom: '3rem', color: 'white' }}>
-          Results<br />First<br />Always
-        </h2>
-        <p style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', maxWidth: '600px', color: 'rgba(255,255,255,0.7)', marginBottom: '4rem', lineHeight: 1.6 }}>
-          My philosophy centers on a holistic approach. We don't just focus on the hours you spend in the gym; we optimize your nutrition, recovery, and mindset to guarantee success.
-        </p>
+        <FadeIn animation="down">
+          <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'white' }}>02 — The Mission</p>
+        </FadeIn>
+        <div style={{ height: '1px', background: 'white', opacity: 0.1, margin: '2rem 0' }} />
+        <FadeIn animation="up" style={{ transitionDuration: '1s' }}>
+          <h2 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', fontWeight: 800, lineHeight: 0.9, textTransform: 'uppercase', marginBottom: '3rem' }}>
+            Results<br />First<br />Always
+          </h2>
+        </FadeIn>
+        <FadeIn animation="up" delay={0.2}>
+          <p style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', maxWidth: '600px', color: 'white', opacity: 0.9, marginBottom: '4rem', lineHeight: 1.6 }}>
+            My philosophy centers on a holistic approach. We don't just focus on the hours you spend in the gym; we optimize your nutrition, recovery, and mindset to guarantee success.
+          </p>
+        </FadeIn>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem' }}>
-          <div>
-            <p style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>Nutrition</p>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)' }}>Tailored dietary strategies that fuel your performance without sacrificing the foods you love.</p>
-          </div>
-          <div>
-            <p style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>Training</p>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)' }}>Evidence-based programming designed to build lean muscle and shred body fat effectively.</p>
-          </div>
-          <div>
-            <p style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>Mindset</p>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.5)' }}>Cultivating the discipline and mental fortitude required for sustainable long-term health.</p>
-          </div>
+          {[{ label: 'Nutrition', text: 'Tailored dietary strategies that fuel your performance without sacrificing the foods you love.' }, { label: 'Training', text: 'Evidence-based programming designed to build lean muscle and shred body fat effectively.' }, { label: 'Mindset', text: 'Cultivating the discipline and mental fortitude required for sustainable long-term health.' }].map((item, i) => (
+            <FadeIn key={i} animation="up" delay={i * 0.1}>
+              <p style={{ color: 'white', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>{item.label}</p>
+              <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.6)' }}>{item.text}</p>
+            </FadeIn>
+          ))}
         </div>
       </div>
     </section>
 
     {/* Section 03 */}
-    <section className="section-padding" style={{ background: '#111111', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
+    <section className="section-padding" style={{ backgroundColor: '#F5F5F0', color: '#000', minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
       <div className="container">
-        <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--primary)' }}>03 — The Process</p>
-        <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '2rem 0' }} />
-        <h2 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', fontWeight: 800, lineHeight: 0.9, textTransform: 'uppercase', marginBottom: '3rem', color: 'white' }}>
-          Commit.<br />Execute.<br /><span className="text-gold">Transform.</span>
-        </h2>
+        <FadeIn animation="down">
+          <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--primary)' }}>03 — The Process</p>
+        </FadeIn>
+        <div style={{ height: '1px', background: 'black', opacity: 0.1, margin: '2rem 0' }} />
+        <FadeIn animation="up" style={{ transitionDuration: '1s' }}>
+          <h2 style={{ fontSize: 'clamp(3rem, 10vw, 8rem)', fontWeight: 800, lineHeight: 0.9, textTransform: 'uppercase', marginBottom: '3rem' }}>
+            Commit.<br />Execute.<br />Transform.
+          </h2>
+        </FadeIn>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem' }}>
-          <div>
-            <p style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>01 — Consult</p>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)' }}>We analyze your current lifestyle, set realistic goals, and build a custom blueprint.</p>
-          </div>
-          <div>
-            <p style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>02 — Execute</p>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)' }}>Follow the specialized training and nutrition protocols designed specifically for your body type.</p>
-          </div>
-          <div>
-            <p style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>03 — Evolve</p>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)' }}>Track your progress, adjust as needed, and achieve the ultimate physical transformation.</p>
-          </div>
+          {[{ label: '01 — Consult', text: 'We analyze your current lifestyle, set realistic goals, and build a custom blueprint.' }, { label: '02 — Execute', text: 'Follow the specialized training and nutrition protocols designed specifically for your body type.' }, { label: '03 — Evolve', text: 'Track your progress, adjust as needed, and achieve the ultimate physical transformation.' }].map((item, i) => (
+            <FadeIn key={i} animation="up" delay={i * 0.15}>
+              <p style={{ color: 'var(--primary)', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', marginBottom: '1rem' }}>{item.label}</p>
+              <p style={{ fontSize: '1rem', color: 'rgba(0,0,0,0.7)' }}>{item.text}</p>
+            </FadeIn>
+          ))}
         </div>
       </div>
     </section>
 
     {/* Section 04 */}
-    <section className="section-padding" style={{ background: '#070707', minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
+    <section className="section-padding" style={{ backgroundColor: '#ffffff', color: '#000', minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
       <div className="container" style={{ textAlign: 'center' }}>
-        <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--primary)', marginBottom: '2rem' }}>04 — Take Action</p>
-        <h2 style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase', marginBottom: '3rem', color: 'white' }}>
-          Ready To Begin?
-        </h2>
-
-        <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto 4rem', color: 'rgba(255,255,255,0.6)' }}>
-          Take control of your health. Contact me today and let's shape the future of your fitness journey together.
-        </p>
-        <Link to="/contact" className="btn-gold" style={{ display: 'inline-block', padding: '1.5rem 4rem', fontSize: '1rem' }}>Start Now</Link>
+        <FadeIn animation="up">
+          <p style={{ fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--primary)', marginBottom: '2rem' }}>04 — Take Action</p>
+          <h2 style={{ fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 800, lineHeight: 1, textTransform: 'uppercase', marginBottom: '3rem' }}>
+            Ready To Begin?
+          </h2>
+          <p style={{ fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto 4rem', color: 'rgba(0,0,0,0.7)' }}>
+            Take control of your health. Contact me today and let's shape the future of your fitness journey together.
+          </p>
+          <Link to="/contact" className="btn-gold" style={{ display: 'inline-block', padding: '1.5rem 4rem', fontSize: '1rem' }}>Start Now</Link>
+        </FadeIn>
       </div>
     </section>
   </div>
@@ -1148,12 +1152,13 @@ const AboutPage = () => (
 
 // --- Services Page ---
 const ServicesPage = () => (
-  <section className="section-padding" style={{ minHeight: '100vh', paddingTop: '140px', background: 'linear-gradient(135deg, #111111 0%, #070707 100%)', position: 'relative' }}>
-    <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.3, zIndex: 0 }} />
-    <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+  <section className="section-padding" style={{ minHeight: '100vh', paddingTop: '140px', background: 'var(--bg-surface)' }}>
+    <div className="container">
       <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <div className="text-gold" style={{ fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem', fontSize: '0.8rem' }}>What I Offer</div>
-        <h1 style={{ fontSize: '4rem', fontWeight: 800, color: 'white' }}>Divine Services</h1>
+        <FadeIn animation="up">
+          <div className="text-gold" style={{ fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem', fontSize: '0.8rem' }}>What I Offer</div>
+          <h1 style={{ fontSize: '4rem', fontWeight: 800 }}>Divine Services</h1>
+        </FadeIn>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
         {[
@@ -1162,11 +1167,13 @@ const ServicesPage = () => (
           { title: 'Nutrition Guidance', desc: 'Expert dietary planning to fuel your body, optimize your performance, and support recovery.' },
           { title: 'Online Coaching', desc: 'Remote programming and accountability for clients anywhere in the world.' }
         ].map((s, i) => (
-          <div key={i} className="service-card" style={{ padding: '3rem 2.5rem', background: '#1a1a1a', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 'var(--radius-md)', height: '100%', transition: 'all 0.3s ease' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: 700, color: 'white' }}>{s.title}</h3>
-            <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '2.5rem', fontSize: '1rem', lineHeight: 1.6 }}>{s.desc}</p>
-            <Link to="/contact" className="text-gold" style={{ fontWeight: 700, textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Book Session</Link>
-          </div>
+          <FadeIn key={i} animation="up" delay={i * 0.1}>
+            <div className="service-card" style={{ padding: '3rem 2.5rem', background: 'white', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-md)', height: '100%' }}>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: 700 }}>{s.title}</h3>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '2.5rem', fontSize: '1rem', lineHeight: 1.6 }}>{s.desc}</p>
+              <Link to="/contact" className="text-gold" style={{ fontWeight: 700, textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.05em' }}>Book Session</Link>
+            </div>
+          </FadeIn>
         ))}
       </div>
     </div>
@@ -1175,29 +1182,29 @@ const ServicesPage = () => (
 
 // --- Contact Page ---
 const ContactPage = () => (
-  <section className="section-padding" style={{ minHeight: '100vh', paddingTop: '140px', background: 'linear-gradient(135deg, #111111 0%, #070707 100%)', position: 'relative' }}>
-    <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.3, zIndex: 0 }} />
-    <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto', background: '#1a1a1a', padding: '5rem 3rem', borderRadius: 'var(--radius-lg)', border: '1px solid rgba(212, 175, 55, 0.2)', textAlign: 'center', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
-        <div className="text-gold" style={{ fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem', fontSize: '0.8rem' }}>Take Action</div>
-        <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: 800, color: 'white' }}>Ready to Transform?</h1>
-
-        <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '3rem', fontSize: '1.1rem' }}>
-          Contact me today to schedule your first consultation and begin your journey to excellence. I am ready to help you hit your goals.
-        </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center', marginBottom: '3rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.25rem', fontWeight: 600, color: 'white' }}>
-            <Phone className="text-gold" /> (920) 957-2284
+  <section className="section-padding marble-bg" style={{ minHeight: '100vh', paddingTop: '140px' }}>
+    <div className="container">
+      <FadeIn animation="up">
+        <div style={{ maxWidth: '800px', margin: '0 auto', background: 'var(--bg-divine)', padding: '5rem 3rem', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-gold)', textAlign: 'center', boxShadow: '0 20px 50px rgba(0,0,0,0.05)' }}>
+          <div className="text-gold" style={{ fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem', fontSize: '0.8rem' }}>Take Action</div>
+          <h1 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: 800 }}>Ready to Transform?</h1>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.1rem' }}>
+            Contact me today to schedule your first consultation and begin your journey to excellence. I am ready to help you hit your goals.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center', marginBottom: '3rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.25rem', fontWeight: 600 }}>
+              <Phone className="text-gold" /> (920) 957-2284
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.25rem', fontWeight: 600 }}>
+              <MapPin className="text-gold" /> Wisconsin, USA
+            </div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '1.25rem', fontWeight: 600, color: 'white' }}>
-            <MapPin className="text-gold" /> Wisconsin, USA
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center' }}>
+            <a href="tel:9209572284" className="btn-gold" style={{ padding: '1rem 2rem', fontSize: '1rem' }}>Call Now</a>
+            <a href="mailto:contact@kymberleymarr.com" className="btn-gold" style={{ background: 'transparent', color: 'var(--primary)', border: '1px solid var(--primary)', padding: '1rem 2rem', fontSize: '1rem' }}>Email Me</a>
           </div>
         </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center' }}>
-          <a href="tel:9209572284" className="btn-gold" style={{ padding: '1rem 2rem', fontSize: '1rem' }}>Call Now</a>
-          <a href="mailto:contact@kymberleymarr.com" className="btn-gold" style={{ background: 'transparent', color: 'white', border: '1px solid rgba(255,255,255,0.2)', padding: '1rem 2rem', fontSize: '1rem' }}>Email Me</a>
-        </div>
-      </div>
+      </FadeIn>
     </div>
   </section>
 );
