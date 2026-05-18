@@ -1,0 +1,467 @@
+@import "tailwindcss";
+
+:root {
+  /* Divine Palette - Enhanced */
+  --primary: #D4AF37;
+  --primary-light: #F9F3E5;
+  --primary-dark: #A6892C;
+  --secondary: #121212;
+  --accent: #EAEAEA;
+  
+  /* Backgrounds */
+  --bg-base: #FFFFFF;
+  --bg-surface: #F9F9F9;
+  --bg-divine: radial-gradient(circle at top left, #FFFFFF 0%, #FDFBF0 50%, #F9F3E5 100%);
+  --bg-dark: #0A0A0A;
+  
+  /* Text */
+  --text-main: #1A1A1A;
+  --text-muted: #4A4A4A;
+  --text-dim: #717171;
+  --text-white: #FFFFFF;
+  
+  /* Borders */
+  --border-light: rgba(212, 175, 55, 0.08);
+  --border-gold: rgba(212, 175, 55, 0.25);
+  
+  /* Radius */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* Transitions */
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY & HTML — SCROLL FIX ===== */
+html {
+  overflow-x: hidden;
+  /* Never set overflow-y here — let body control it */
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  line-height: 1.7;
+  overflow-x: hidden;
+  overflow-y: auto; /* Explicit scroll on body */
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  width: 100%;
+  /* No contain, no isolation that could trap scroll */
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* FIX: Removed `contain: content` — it was creating isolated scroll containers
+   that trapped AOS's IntersectionObserver and froze page scroll */
+.section-padding {
+  padding: 10rem 0;
+}
+
+
+/* ===== ANIMATIONS ===== */
+@keyframes shine {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== UI COMPONENTS ===== */
+
+/* Shiny Text */
+.shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(212, 175, 55, 0) 25%,
+    rgba(212, 175, 55, 0.8) 50%,
+    rgba(212, 175, 55, 0) 75%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  display: inline-block;
+  animation: shine 4s infinite ease-in-out;
+  will-change: background-position;
+}
+
+/* Count Up */
+.count-up {
+  animation: countUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gold Button */
+.btn-gold {
+  position: relative;
+  background: var(--primary);
+  color: white !important;
+  padding: 1.1rem 2.8rem;
+  border-radius: var(--radius-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  z-index: 1;
+}
+
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.25);
+  background: var(--primary-dark);
+}
+
+.btn-gold:hover::before {
+  left: 100%;
+}
+
+/* Text Gold */
+.text-gold {
+  color: var(--primary);
+}
+
+/* Section Labels */
+.section-subtitle {
+  display: block;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+/* Gold Divider */
+.divider-gold {
+  width: 60px;
+  height: 2px;
+  background: var(--primary);
+  margin: 2rem auto;
+}
+
+/* Marble Background */
+.marble-bg {
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
+}
+
+/* Glass */
+.glass {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Reveal (GSAP-ready) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Blend Mode */
+.blend-difference {
+  mix-blend-mode: difference;
+  color: white !important;
+}
+
+/* ===== GALLERY CARDS ===== */
+.gallery-card-simple:hover .gallery-overlay {
+  opacity: 1 !important;
+}
+
+.gallery-card-simple:hover .overlay-content {
+  transform: translateY(0) !important;
+}
+
+.gallery-card-simple:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  pointer-events: none;
+}
+
+/* ===== SERVICE CARDS ===== */
+.service-card {
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* ===== FOOTER LINKS ===== */
+.footer-link:hover {
+  color: var(--primary);
+}
+
+/* ===== SOCIAL LINKS ===== */
+.social-link:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3.2rem !important;
+  }
+
+  .section-padding {
+    padding: 6rem 0;
+  }
+}
+
+/* --- Hero Image Responsiveness --- */
+.hero-image-wrapper {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hero-image-wrapper {
+    display: block;
+    position: absolute;
+    right: 8%;
+    top: 20%;
+    width: 32%;
+    height: 65%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+}
+
+/* --- Universal Responsive Grids --- */
+.responsive-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 992px) {
+  .responsive-grid-2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.responsive-grid-2-12 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 992px) {
+  .responsive-grid-2-12 {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.responsive-grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 576px) {
+  .responsive-grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-grid-4 {
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 5rem;
+  }
+}
+
+/* --- Responsive Gallery (Masonry Grid) --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+}
+
+.gallery-card-simple {
+  --gallery-mt: 0px;
+}
+@media (min-width: 768px) {
+  .gallery-card-simple {
+    --gallery-mt: var(--desktop-mt, 0px);
+  }
+}
+
+/* --- Orbiting Circles Scaling on Mobile --- */
+@media (max-width: 480px) {
+  .orbiting-circles-container {
+    transform: scale(0.7) !important;
+    transform-origin: center !important;
+  }
+}
+
+/* --- Responsive Navbar (Mobile Hamburger Menu) --- */
+.nav-desktop {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: transparent;
+  color: var(--secondary);
+  padding: 0.5rem;
+  z-index: 101;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile-toggle {
+    display: block;
+  }
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 4rem 2rem;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(-100%);
+}
+
+.mobile-menu-overlay.open {
+  transform: translateY(0);
+}
+
+.mobile-menu-link {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--secondary);
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+  color: var(--primary);
+}
