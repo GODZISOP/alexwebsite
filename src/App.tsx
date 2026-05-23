@@ -408,8 +408,9 @@ const Navbar = () => {
         transition: 'var(--transition-smooth)'
       }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'var(--secondary)', position: 'relative', zIndex: 101 }}>
-            Kymberley <ShinyText text="Marr" />
+          <Link to="/" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'var(--secondary)', position: 'relative', zIndex: 101, display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+            <span style={{ fontSize: '1.3rem' }}>Kymberley <ShinyText text="Marr" /></span>
+            <span style={{ fontSize: '0.65rem', letterSpacing: '0.25em', color: 'var(--primary)', fontWeight: 700 }}>Empower You</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -481,7 +482,7 @@ const HomePage = () => {
             <div>
               <FadeIn animation="down" className="text-gold" style={{ fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '1.5rem', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <span style={{ width: '24px', height: '1.5px', background: 'var(--primary)' }} />
-                ISSA Master Certified Coach
+                Empower You • ISSA Certified Master Trainer
               </FadeIn>
               
               <FadeIn animation="up" style={{ transitionDuration: '1s' }}>
@@ -494,8 +495,8 @@ const HomePage = () => {
                   letterSpacing: '-0.02em',
                   fontFamily: 'var(--font-main)'
                 }}>
-                  Achieve Your <br />
-                  <span className="fitness-goals-title">FITNESS GOALS</span> <br />
+                  Empower Your <br />
+                  <span className="fitness-goals-title">FITNESS JOURNEY</span> <br />
                   With Kymberley Marr
                 </h1>
               </FadeIn>
@@ -509,7 +510,7 @@ const HomePage = () => {
                   fontWeight: 400, 
                   lineHeight: 1.65 
                 }}>
-                  Join the elite Kymberley Marr Fitness community and transform your body under the guidance of a top-tier ISSA Master Trainer. Personalized programming engineered for your absolute success.
+                  I am Kymberley Marr, owner of Empower You and an ISSA Certified Master Trainer. Join our community to break plateaus, build healthy sustainable habits, and achieve real results tailored to your lifestyle.
                 </p>
                 
                 <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
@@ -620,10 +621,10 @@ const HomePage = () => {
             </FadeIn>
             <FadeIn animation="left" delay={0.2}>
               <div className="text-gold" style={{ fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem', fontSize: '0.8rem' }}>About Me</div>
-              <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem', fontWeight: 800 }}>Journey to Excellence</h2>
+              <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem', fontWeight: 800 }}>Empower You Fitness</h2>
 
               <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '2rem', lineHeight: 1.8 }}>
-                I am Kymberley Marr, an ISSA-certified fitness professional dedicated to helping you set realistic goals and transform your health and your life for the better. My approach combines evidence-based training with holistic lifestyle changes.
+                I am Kymberley Marr, owner of Empower You and an ISSA Certified Master Trainer. With over a decade of dedicated professional coaching, my mission is to break plateaus, manage physical challenges, and architect life-sustaining health transformations.
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '2.5rem' }}>
                 <div style={{ padding: '1.5rem', background: 'white', borderRadius: 'var(--radius-sm)', borderLeft: '3px solid var(--primary)', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
@@ -685,7 +686,7 @@ const HomePage = () => {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2rem' }}>
                 {[
-                  { title: "ISSA Master Trainer Status", desc: "Certified at the highest tier in fitness science, bio-mechanics, and elite conditioning." },
+                  { title: "ISSA Certified Master Trainer", desc: "Certified at the highest tier in fitness science, bio-mechanics, and elite conditioning." },
                   { title: "NASM Corrective Exercise Specialist", desc: "Expertise in joint alignment, posture correction, and injury prevention." },
                   { title: "Precision Nutrition Certification", desc: "Scientific metabolic manipulation and performance-enhancing nutrition architecture." }
                 ].map((item, i) => (
@@ -932,9 +933,9 @@ const HomePage = () => {
               <div className="responsive-grid-2" style={{ gap: '2.5rem' }}>
                 {[
                   { title: 'Expertise', text: '10+ Years Experience' },
-                  { title: 'Certification', text: 'ISSA Master Certified' },
+                  { title: 'Certification', text: 'ISSA Certified Master Trainer' },
                   { title: 'Methodology', text: 'Evidence-Based' },
-                  { title: 'Results', text: 'Guaranteed Evolve' }
+                  { title: 'Results', text: 'Guaranteed Transformation' }
                 ].map((f, i) => (
                   <div key={i}>
                     <h4 style={{ color: 'var(--primary)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>{f.title}</h4>
@@ -958,33 +959,174 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Reviews & Client Success */}
       <section style={{ padding: '10rem 0', background: 'var(--bg-surface)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: 'radial-gradient(var(--border-light) 0.5px, transparent 0.5px)', backgroundSize: '30px 30px', opacity: 0.2 }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
             <FadeIn animation="up">
-              <span className="section-subtitle">Elite Community</span>
+              <span className="section-subtitle">Real Results</span>
             </FadeIn>
             <FadeIn animation="up" delay={0.1}>
-              <h2 className="section-title">Proven Results.</h2>
+              <h2 className="section-title">Client Success Stories</h2>
             </FadeIn>
-
+            <div className="divider-gold" style={{ margin: '0 auto' }} />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'stretch' }}>
             {[
-              { name: 'Marcus Chen', role: 'Executive', quote: "The transformation wasn't just physical. Kymberley helped me rebuild my discipline and mindset from the ground up." },
-              { name: 'Sarah Jenkins', role: 'Athlete', quote: 'Professional, science-based, and incredibly effective. My performance in the field has seen a 40% increase in power output.' }
+              {
+                name: 'Jennifer Gibson',
+                role: 'Verified Client',
+                avatarLetter: 'J',
+                avatarBg: '#D4AF37',
+                date: 'a week ago',
+                rating: 5,
+                quote: "I can’t say enough good things about my experience with this trainer. When I first started, I had no real direction with fitness, and managing my diet felt overwhelming—especially with diabetes. They took the time to really understand my situation and created a plan that actually worked for me, not some one-size-fits-all program.\n\nWhat stood out the most was how supportive and knowledgeable they were. They helped me build sustainable habits, not just quick fixes. I’ve lost weight, gained strength, and toned up in a way that feels healthy and maintainable. Even more importantly, I feel more in control of my diet and how it impacts my blood sugar.\n\nIf you’re looking for someone who genuinely cares, listens, and knows how to guide you step-by-step, I highly recommend them. This has been life-changing for me.",
+                response: {
+                  author: 'Empower You',
+                  role: 'Owner',
+                  date: 'a week ago',
+                  text: 'I love that we were able to help you make life-sustaining changes!! I love working with you and seeing you achieve absolute control over your health and body.'
+                }
+              },
+              {
+                name: 'Sarah Brooks',
+                role: 'Verified Client',
+                avatarLetter: 'S',
+                avatarBg: '#121212',
+                date: 'a week ago',
+                rating: 5,
+                quote: "Kymberley is an absolute expert in corrective exercise. She helped me transform my body and manage my MS pain with incredible patience and respect. I’ve regained the mobility and confidence I needed to enjoy life with my grandkids again. If you're looking for a professional who delivers real results, look no further than Empower You!",
+                response: {
+                  author: 'Empower You',
+                  role: 'Owner',
+                  date: 'a week ago',
+                  text: 'Thank you so much for your confidence and trust during this process. I look forward to working with you for the years to come!'
+                }
+              },
+              {
+                name: 'Shawnee Haight',
+                role: 'Verified Client',
+                avatarLetter: 'S',
+                avatarBg: '#A6892C',
+                date: 'a week ago',
+                rating: 5,
+                quote: "I was always hesitant to hire a trainer because of the cost and the fear of feeling overwhelmed. Kymberley changed all of that. She has reasonable prices. She is a true expert who breaks everything down into simple, easy-to-follow steps. Because her sessions are so cost-effective, I was finally able to prioritize my fitness. It’s the best investment I’ve made in myself this year!",
+                response: {
+                  author: 'Empower You',
+                  role: 'Owner',
+                  date: '2 months ago',
+                  text: "I’m smiling from ear to ear reading this, Shawnee! Thank you for the wonderful review. I am genuinely super happy to be a part of your journey. Helping people see the results they’ve worked so hard for is exactly why I do what I do. You’ve put in the work, and you deserve every success!"
+                }
+              }
             ].map((t, i) => (
-              <FadeIn key={i} animation="up" delay={i * 0.1} style={{ padding: '4rem', background: 'white', border: '1px solid var(--border-light)', borderRadius: 'var(--radius-sm)', position: 'relative' }}>
-                <div style={{ position: 'absolute', top: '2rem', right: '3rem', fontSize: '5rem', color: 'var(--primary)', opacity: 0.1, fontFamily: 'serif' }}>"</div>
-                <p style={{ fontSize: '1.25rem', lineHeight: 1.8, marginBottom: '2.5rem', fontStyle: 'italic', color: 'var(--text-muted)' }}>{t.quote}</p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-                  <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'var(--primary-light)' }} />
+              <FadeIn key={i} animation="up" delay={i * 0.1} style={{ height: '100%' }}>
+                <div style={{ 
+                  padding: '3rem 2.5rem', 
+                  background: 'white', 
+                  border: '1px solid var(--border-light)', 
+                  borderRadius: 'var(--radius-md)', 
+                  position: 'relative',
+                  boxShadow: '0 15px 40px rgba(0,0,0,0.02)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
+                  justifyContent: 'space-between'
+                }}>
+                  {/* Top segment with Reviewer details */}
                   <div>
-                    <h4 style={{ fontSize: '1.1rem', fontWeight: 700 }}>{t.name}</h4>
-                    <p style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em' }}>{t.role}</p>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
+                      <div style={{ 
+                        width: '48px', 
+                        height: '48px', 
+                        borderRadius: '50%', 
+                        background: t.avatarBg, 
+                        color: 'white',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontWeight: 700,
+                        fontSize: '1.2rem',
+                        fontFamily: 'var(--font-heading)'
+                      }}>
+                        {t.avatarLetter}
+                      </div>
+                      <div>
+                        <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--secondary)', marginBottom: '0.15rem' }}>{t.name}</h4>
+                        <p style={{ fontSize: '0.75rem', color: 'var(--text-dim)', fontWeight: 500 }}>{t.role}</p>
+                      </div>
+                    </div>
+
+                    {/* Star Rating Row */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+                      <div style={{ display: 'flex', gap: '2px' }}>
+                        {[...Array(t.rating)].map((_, index) => (
+                          <svg key={index} width="16" height="16" viewBox="0 0 24 24" fill="#D4AF37" stroke="#D4AF37" strokeWidth="1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                          </svg>
+                        ))}
+                      </div>
+                      <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginLeft: '0.25rem' }}>{t.date}</span>
+                    </div>
+
+                    {/* Quote Content */}
+                    <p style={{ 
+                      fontSize: '1.02rem', 
+                      lineHeight: 1.7, 
+                      marginBottom: '2.5rem', 
+                      color: 'var(--text-muted)',
+                      whiteSpace: 'pre-line'
+                    }}>
+                      "{t.quote}"
+                    </p>
                   </div>
+
+                  {/* Owner Response Subcard */}
+                  {t.response && (
+                    <div style={{ 
+                      padding: '1.5rem', 
+                      background: '#FAF8F2', 
+                      borderLeft: '3px solid var(--primary)', 
+                      borderRadius: '0 var(--radius-sm) var(--radius-sm) 0',
+                      marginTop: 'auto'
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                          <span style={{ 
+                            fontSize: '0.85rem', 
+                            fontWeight: 800, 
+                            color: 'var(--secondary)',
+                            display: 'flex',
+                            alignItems: 'center'
+                          }}>
+                            {t.response.author} 
+                            <span style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: 500, marginLeft: '0.35rem' }}>({t.response.role})</span>
+                            {/* Blue Verified Check */}
+                            <span style={{ 
+                              display: 'inline-flex', 
+                              alignItems: 'center', 
+                              justifyContent: 'center', 
+                              width: '13px', 
+                              height: '13px', 
+                              borderRadius: '50%', 
+                              background: '#3897f0', 
+                              color: '#fff', 
+                              fontSize: '8px', 
+                              fontWeight: 'bold',
+                              marginLeft: '6px'
+                            }}>
+                              ✓
+                            </span>
+                          </span>
+                        </div>
+                        <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)' }}>{t.response.date}</span>
+                      </div>
+                      <p style={{ fontSize: '0.9rem', lineHeight: 1.6, color: 'var(--text-muted)', margin: 0 }}>
+                        {t.response.text}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </FadeIn>
             ))}
@@ -1212,7 +1354,7 @@ const ContactPage = () => (
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
             <a href="tel:9209572284" className="btn-gold" style={{ padding: '1rem 2rem', fontSize: '1rem', flex: '1 1 auto', maxWidth: '200px' }}>Call Now</a>
-            <a href="mailto:contact@kymberleymarr.com" className="btn-gold" style={{ background: 'transparent', color: 'var(--primary)', border: '1px solid var(--primary)', padding: '1rem 2rem', fontSize: '1rem', flex: '1 1 auto', maxWidth: '200px' }}>Email Me</a>
+            <a href="mailto:info@empoweryoufitness.com" className="btn-gold" style={{ background: 'transparent', color: 'var(--primary)', border: '1px solid var(--primary)', padding: '1rem 2rem', fontSize: '1rem', flex: '1 1 auto', maxWidth: '200px' }}>Email Me</a>
           </div>
         </div>
       </FadeIn>
@@ -1228,18 +1370,20 @@ const Footer = () => (
       <div className="responsive-grid-4" style={{ marginBottom: '6rem' }}>
         {/* Brand */}
         <FadeIn>
-          <Link to="/" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'white', display: 'block', marginBottom: '2rem' }}>
-            Kymberley <span style={{ color: 'var(--primary)' }}>Marr</span>
+          <Link to="/" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: 800, letterSpacing: '0.05em', textTransform: 'uppercase', color: 'white', display: 'flex', flexDirection: 'column', lineHeight: 1.15, marginBottom: '2rem' }}>
+            <span>Kymberley <span style={{ color: 'var(--primary)' }}>Marr</span></span>
+            <span style={{ fontSize: '0.75rem', letterSpacing: '0.25em', color: 'rgba(255,255,255,0.4)', fontWeight: 700, marginTop: '0.25rem' }}>Empower You</span>
           </Link>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem', lineHeight: 1.9, marginBottom: '2.5rem', maxWidth: '350px' }}>
             A legacy of strength, carved through science and dedication. We help elite individuals realize their full potential.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            {[IconInstagram, IconFacebook, IconTwitter].map((Icon, i) => (
-              <a key={i} href="#" style={{ width: '44px', height: '44px', borderRadius: '0', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', transition: 'var(--transition-fast)' }} className="social-link">
-                <Icon />
-              </a>
-            ))}
+            <a href="https://www.facebook.com/share/1FrxqQTejm/" target="_blank" rel="noopener noreferrer" style={{ width: '44px', height: '44px', borderRadius: '0', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', transition: 'var(--transition-fast)' }} className="social-link" title="Facebook">
+              <IconFacebook />
+            </a>
+            <a href="https://www.instagram.com/alex_marr94?igsh=MTA0Z3pvb2E0eDI4cA==" target="_blank" rel="noopener noreferrer" style={{ width: '44px', height: '44px', borderRadius: '0', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', transition: 'var(--transition-fast)' }} className="social-link" title="Instagram">
+              <IconInstagram />
+            </a>
           </div>
         </FadeIn>
 
@@ -1265,7 +1409,7 @@ const Footer = () => (
               <Phone size={16} className="text-gold" /> (920) 957-2284
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
-              <Mail size={16} className="text-gold" /> contact@kymberleymarr.com
+              <Mail size={16} className="text-gold" /> info@empoweryoufitness.com
             </li>
           </ul>
         </FadeIn>
